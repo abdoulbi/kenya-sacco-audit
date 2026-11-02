@@ -1,0 +1,108 @@
+{
+  "created": "2026-03-08T18:31:59.403049+00:00",
+  "modified": "2026-03-08T18:32:01.137148+00:00",
+  "id": 18912903,
+  "conceptrecid": "18912902",
+  "doi": "10.5281/zenodo.18912903",
+  "conceptdoi": "10.5281/zenodo.18912902",
+  "doi_url": "https://doi.org/10.5281/zenodo.18912903",
+  "metadata": {
+    "title": "SACCO Loan Data for Women Entrepreneurs in Kenya (2015-2025)",
+    "doi": "10.5281/zenodo.18912903",
+    "publication_date": "2026-03-08",
+    "description": "<p>This dataset contains anonymized loan records from women-owned micro-enterprises obtained from multiple Savings and Credit Cooperative Organizations (SACCOs) operating in Kenya. The data were collected over a ten-year period from January 2015 to April 2025 and include information on borrower demographics, business characteristics, loan attributes, group dynamics, savings behavior, and repayment outcomes. The dataset was used to develop and validate explainable machine learning models for predicting loan default, with the goal of supporting transparent and responsible credit decision-making in microfinance contexts.</p>\n<p><strong>Data Collection Period:</strong>&nbsp;January 2015 &ndash; April 2025</p>\n<p><strong>Geographic Coverage:</strong>&nbsp;Multiple counties in Kenya</p>\n<p><strong>Institution Type:</strong>&nbsp;Savings and Credit Cooperative Organizations (SACCOs)</p>\n<p><strong>Target Population:</strong>&nbsp;Women-owned micro-enterprises, defined as businesses where women hold majority ownership and primary management responsibility</p>\n<p><strong>Sample Size:</strong> 4,850 loan records (after data cleaning and removal of variables that could introduce data leakage)</p>\n<h3>Data Structure and Variables</h3>\n<p>The dataset includes 4,850 observations and 36 variables organized into five conceptual categories:</p>\n<h4>1. Demographic Variables</h4>\n<ul>\n<li>\n<p><code>Age</code>: Borrower age in years (continuous, 18-80 years)</p>\n</li>\n<li>\n<p><code>Marital_Status</code>: Current marital status (categorical: 1=Single, 2=Married, 3=Divorced, 4=Widowed)</p>\n</li>\n<li>\n<p><code>Education_Level</code>: Highest education completed (ordinal: 1=None, 2=Primary, 3=Secondary, 4=Tertiary)</p>\n</li>\n<li>\n<p><code>Household_Size</code>: Number of household members (continuous, 1-15 persons)</p>\n</li>\n<li>\n<p><code>Number_of_Dependents</code>: Number of dependent children (continuous, 0-10 persons)</p>\n</li>\n</ul>\n<h4>2. Business Characteristics</h4>\n<ul>\n<li>\n<p><code>Business_Sector</code>: Type of business activity (categorical: 1=Retail trade, 2=Agriculture, 3=Manufacturing, 4=Services, 5=Other)</p>\n</li>\n<li>\n<p><code>Business_Age_Years</code>: Years since business establishment (continuous, 0-30 years)</p>\n</li>\n<li>\n<p><code>Business_Location</code>: Geographic location of business (categorical: Urban, Rural)</p>\n</li>\n<li>\n<p><code>Monthly_Revenue_KES</code>: Average monthly business revenue in Kenyan Shillings (continuous, 0-1,000,000+)</p>\n</li>\n<li>\n<p><code>Business_Registration</code>: Formal registration status (binary: 0=Informal, 1=Formally registered)</p>\n</li>\n<li>\n<p><code>Number_of_Employees</code>: Full-time equivalent employees (continuous, 0-20 persons)</p>\n</li>\n</ul>\n<h4>3. Loan Characteristics</h4>\n<ul>\n<li>\n<p><code>Loan_Amount_KES</code>: Principal amount borrowed in Kenyan Shillings (continuous, 10,000-5,000,000)</p>\n</li>\n<li>\n<p><code>Loan_Term_Months</code>: Duration of loan in months (continuous, 3-60 months)</p>\n</li>\n<li>\n<p><code>Interest_Rate_Percent</code>: Annual percentage rate (continuous, 5-30 percent)</p>\n</li>\n<li>\n<p><code>Loan_Purpose</code>: Intended use of loan funds (categorical: 1=Working capital, 2=Asset purchase, 3=Business expansion, 4=Other)</p>\n</li>\n<li>\n<p><code>Collateral_Type</code>: Type of collateral provided (categorical: 1=None, 2=Guarantor, 3=Group guarantee, 4=Land, 5=Other)</p>\n</li>\n<li>\n<p><code>Previous_Loans_Count</code>: Number of previous loans from same institution (continuous, 0-10 loans)</p>\n</li>\n<li>\n<p><code>Loan_Cycle</code>: Current loan cycle number (ordinal: 1=First loan, 2=Second loan, 3=Third or more)</p>\n</li>\n</ul>\n<h4>4. Group Characteristics</h4>\n<ul>\n<li>\n<p><code>Group_Size</code>: Number of members in borrowing group (continuous, 5-50 members)</p>\n</li>\n<li>\n<p><code>Group_Meetings_Per_Month</code>: Number of group meetings per month (continuous, 0-10 meetings)</p>\n</li>\n<li>\n<p><code>Training_Sessions_Attended</code>: Number of financial literacy sessions attended (continuous, 0-20 sessions)</p>\n</li>\n<li>\n<p><code>Group_Age_Years</code>: Years since group formation (continuous, 0-30 years)</p>\n</li>\n<li>\n<p><code>Group_Cohesion_Score</code>: Self-reported measure of group solidarity (ordinal: 1=Very low to 5=Very high)</p>\n</li>\n<li>\n<p><code>Peer_Pressure_Index</code>: Index of group enforcement mechanisms (continuous, 0-100 scale)</p>\n</li>\n</ul>\n<h4>5. Savings and Credit History</h4>\n<ul>\n<li>\n<p><code>Savings_Rate_KES</code>: Average monthly savings in Kenyan Shillings (continuous, 0-100,000)</p>\n</li>\n<li>\n<p><code>Savings_Balance_KES</code>: Current savings balance in Kenyan Shillings (continuous, 0-1,000,000)</p>\n</li>\n<li>\n<p><code>Credit_History</code>: Past repayment performance rating (ordinal: 1=Poor, 2=Fair, 3=Good, 4=Excellent)</p>\n</li>\n<li>\n<p><code>Length_of_Relationship_Years</code>: Years as SACCO member (continuous, 0-30 years)</p>\n</li>\n</ul>\n<h4>6. Outcome Variable</h4>\n<ul>\n<li>\n<p><code>Loan_Default_Status</code>: Binary indicator of loan default (1=Default, 0=No Default). Default is defined as being 90 or more days past due on scheduled repayments or loan write-off as uncollectible.</p>\n</li>\n</ul>\n<h3>Excluded Variables</h3>\n<p>To prevent data leakage, the following variables were collected but excluded from the final analytical dataset:</p>\n<ul>\n<li>\n<p><code>Days_Past_Due</code>: Excluded because it reflects information available only after loan delinquency</p>\n</li>\n<li>\n<p><code>Loan_Recovery_Procedure</code>: Excluded as it describes post-default actions</p>\n</li>\n<li>\n<p><code>Default_Rate_Percent</code>: Excluded as it represents an aggregated measure of default outcomes</p>\n</li>\n</ul>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Wanyonyi, Maurice",
+        "affiliation": "University of Embu",
+        "orcid": "0000-0002-5894-2549"
+      }
+    ],
+    "resource_type": {
+      "title": "Dataset",
+      "type": "dataset"
+    },
+    "license": {
+      "id": "cc-by-4.0"
+    },
+    "relations": {
+      "version": [
+        {
+          "index": 0,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "18912902"
+          }
+        }
+      ]
+    }
+  },
+  "title": "SACCO Loan Data for Women Entrepreneurs in Kenya (2015-2025)",
+  "links": {
+    "self": "https://zenodo.org/api/records/18912903",
+    "self_html": "https://zenodo.org/records/18912903",
+    "preview_html": "https://zenodo.org/records/18912903?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.18912903",
+    "self_doi": "https://doi.org/10.5281/zenodo.18912903",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18912903",
+    "reserve_doi": "https://zenodo.org/api/records/18912903/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/18912902",
+    "parent_html": "https://zenodo.org/records/18912902",
+    "parent_doi": "https://doi.org/10.5281/zenodo.18912902",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18912902",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:18912903/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:18912903/sequence/default",
+    "files": "https://zenodo.org/api/records/18912903/files",
+    "media_files": "https://zenodo.org/api/records/18912903/media-files",
+    "latest": "https://zenodo.org/api/records/18912903/versions/latest",
+    "latest_html": "https://zenodo.org/records/18912903/latest",
+    "versions": "https://zenodo.org/api/records/18912903/versions",
+    "draft": "https://zenodo.org/api/records/18912903/draft",
+    "access_links": "https://zenodo.org/api/records/18912903/access/links",
+    "access_grants": "https://zenodo.org/api/records/18912903/access/grants",
+    "access_users": "https://zenodo.org/api/records/18912903/access/users",
+    "access_request": "https://zenodo.org/api/records/18912903/access/request",
+    "access": "https://zenodo.org/api/records/18912903/access",
+    "communities": "https://zenodo.org/api/records/18912903/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/18912903/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/18912903/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/18912903/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/18912903/quota-increase",
+    "requests": "https://zenodo.org/api/records/18912903/requests"
+  },
+  "updated": "2026-03-08T18:32:01.137148+00:00",
+  "recid": "18912903",
+  "revision": 4,
+  "files": [
+    {
+      "id": "fc355098-3ad4-4283-9126-ae7c8e0c17ee",
+      "key": "sacco_loan.xlsx",
+      "size": 908341,
+      "checksum": "md5:8226932cc9e11e3acd394171118568b8",
+      "links": {
+        "self": "https://zenodo.org/api/records/18912903/files/sacco_loan.xlsx/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "1506598"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 123,
+    "unique_downloads": 105,
+    "views": 358,
+    "unique_views": 326,
+    "version_downloads": 123,
+    "version_unique_downloads": 105,
+    "version_unique_views": 326,
+    "version_views": 358
+  },
+  "state": "done",
+  "submitted": true
+}
